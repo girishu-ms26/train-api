@@ -1,4 +1,4 @@
-package com.cloudbees.trainapi;
+package com.trainapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

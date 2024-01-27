@@ -1,7 +1,7 @@
-package com.cloudbees.trainapi.controller;
+package com.trainapi.controller;
 
-import com.cloudbees.trainapi.exceptions.ResourceNotFoundException;
-import com.cloudbees.trainapi.exceptions.SeatNotAvailableException;
+import com.trainapi.exceptions.ResourceNotFoundException;
+import com.trainapi.exceptions.SeatNotAvailableException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

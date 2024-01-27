@@ -1,10 +1,10 @@
-package com.cloudbees.trainapi.service;
+package com.trainapi.service;
 
-import com.cloudbees.trainapi.constants.TrainApiConstants;
-import com.cloudbees.trainapi.exceptions.ResourceNotFoundException;
-import com.cloudbees.trainapi.exceptions.SeatNotAvailableException;
-import com.cloudbees.trainapi.model.Receipt;
-import com.cloudbees.trainapi.model.Seat;
+import com.trainapi.constants.TrainApiConstants;
+import com.trainapi.exceptions.ResourceNotFoundException;
+import com.trainapi.exceptions.SeatNotAvailableException;
+import com.trainapi.model.Receipt;
+import com.trainapi.model.Seat;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,8 +13,6 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-
-import static com.cloudbees.trainapi.constants.TrainApiConstants.BOOKED;
 
 @Service
 @AllArgsConstructor
@@ -47,14 +45,14 @@ public class TrainService {
         Seat seat = seatService.findSeatBySectionAndSeatNumber(
                 receipt.getSeat().getSection(),
                 receipt.getSeat().getSeatNumber());
-        if(seat.getSeatStatus().equals(BOOKED)) {
+        if(seat.getSeatStatus().equals(TrainApiConstants.BOOKED)) {
             throw new SeatNotAvailableException("Seat not available");
         }
         return bookTicket(receipt, seat);
     }
 
     private Receipt bookTicket(Receipt receipt, Seat seat) {
-        seat.setSeatStatus(BOOKED);
+        seat.setSeatStatus(TrainApiConstants.BOOKED);
         receipt.setSeat(seat);
         receipt = receiptService.saveReceipt(receipt);
         receipt.getUser().setSeat(seat);
@@ -68,7 +66,7 @@ public class TrainService {
 
     @Transactional
     public List<Receipt> getUsersAndSeatsBySectionCode(Character sectionCode) {
-        List<Seat> seats = seatService.findAllSeatsBySectionAndStatus(sectionCode, BOOKED);
+        List<Seat> seats = seatService.findAllSeatsBySectionAndStatus(sectionCode, TrainApiConstants.BOOKED);
         if(seats.isEmpty()) {
             throw new ResourceNotFoundException("No seats to show");
         }

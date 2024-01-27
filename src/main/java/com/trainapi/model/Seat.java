@@ -1,4 +1,4 @@
-package com.cloudbees.trainapi.model;
+package com.trainapi.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

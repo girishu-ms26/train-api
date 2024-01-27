@@ -1,4 +1,4 @@
-package com.cloudbees.trainapi.constants;
+package com.trainapi.constants;
 
 public class TrainApiConstants {
     public static final String BASE_PATH = "/api/trains";

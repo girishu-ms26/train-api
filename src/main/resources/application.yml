@@ -2,7 +2,7 @@ spring:
   application:
     name: train-api
   datasource:
-    url: jdbc:h2:file:./src/main/resources/db/cloudbees # as mem db is volatile, using disk
+    url: jdbc:h2:file:./src/main/resources/db/traindb # as mem db is volatile, using disk
     data-username: sa
     data-password:
     driver-class-name: org.h2.Driver

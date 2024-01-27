@@ -1,8 +1,8 @@
-package com.cloudbees.trainapi.service;
+package com.trainapi.service;
 
-import com.cloudbees.trainapi.constants.TrainApiConstants;
-import com.cloudbees.trainapi.model.Seat;
-import com.cloudbees.trainapi.repo.SeatRepository;
+import com.trainapi.constants.TrainApiConstants;
+import com.trainapi.model.Seat;
+import com.trainapi.repo.SeatRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

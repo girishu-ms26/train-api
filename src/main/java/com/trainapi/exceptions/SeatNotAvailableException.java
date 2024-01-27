@@ -1,4 +1,4 @@
-package com.cloudbees.trainapi.exceptions;
+package com.trainapi.exceptions;
 
 public class SeatNotAvailableException extends RuntimeException {
     public SeatNotAvailableException(String msg) {

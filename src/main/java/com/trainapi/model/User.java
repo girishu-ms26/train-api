@@ -1,42 +1,41 @@
-package com.cloudbees.trainapi.model;
+package com.trainapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
 
 @Getter
 @Setter
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Receipt {
+@Table(name = "User")
+@JsonIgnoreProperties(value = {"seat"})
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int receiptId;
+    private int userId;
 
-    private String start;
+    @Column(name = "firstName")
+    private String firstName;
 
-    private String destination;
+    @Column(name = "lastName")
+    private String lastName;
 
-    private double pricePaid;
+    @Column(name = "emailId")
+    private String emailId;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "userId")
-    private User user;
-
-    @OneToOne(cascade = {CascadeType.PERSIST})
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "seatId")
     private Seat seat;
 }

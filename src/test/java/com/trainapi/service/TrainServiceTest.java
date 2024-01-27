@@ -1,11 +1,11 @@
-package com.cloudbees.trainapi.service;
+package com.trainapi.service;
 
-import com.cloudbees.trainapi.constants.TrainApiConstants;
-import com.cloudbees.trainapi.exceptions.ResourceNotFoundException;
-import com.cloudbees.trainapi.exceptions.SeatNotAvailableException;
-import com.cloudbees.trainapi.model.Receipt;
-import com.cloudbees.trainapi.model.Seat;
-import com.cloudbees.trainapi.model.User;
+import com.trainapi.constants.TrainApiConstants;
+import com.trainapi.exceptions.ResourceNotFoundException;
+import com.trainapi.exceptions.SeatNotAvailableException;
+import com.trainapi.model.Receipt;
+import com.trainapi.model.Seat;
+import com.trainapi.model.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

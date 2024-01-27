@@ -1,7 +1,7 @@
-package com.cloudbees.trainapi.service;
+package com.trainapi.service;
 
-import com.cloudbees.trainapi.model.User;
-import com.cloudbees.trainapi.repo.UserRepository;
+import com.trainapi.model.User;
+import com.trainapi.repo.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

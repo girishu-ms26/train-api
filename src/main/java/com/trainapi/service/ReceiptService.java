@@ -1,8 +1,8 @@
-package com.cloudbees.trainapi.service;
+package com.trainapi.service;
 
-import com.cloudbees.trainapi.exceptions.ResourceNotFoundException;
-import com.cloudbees.trainapi.model.Receipt;
-import com.cloudbees.trainapi.repo.ReceiptRepository;
+import com.trainapi.exceptions.ResourceNotFoundException;
+import com.trainapi.model.Receipt;
+import com.trainapi.repo.ReceiptRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

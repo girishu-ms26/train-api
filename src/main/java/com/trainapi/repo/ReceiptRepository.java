@@ -1,6 +1,6 @@
-package com.cloudbees.trainapi.repo;
+package com.trainapi.repo;
 
-import com.cloudbees.trainapi.model.Receipt;
+import com.trainapi.model.Receipt;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
