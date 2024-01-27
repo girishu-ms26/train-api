@@ -18,12 +18,7 @@ public class ReceiptService {
     private final ReceiptRepository receiptRepository;
 
     public Receipt saveReceipt(Receipt receipt) {
-        try {
-            return receiptRepository.save(receipt);
-        } catch (Exception e) {
-            log.error("Error saving receipt", e);
-            throw new RuntimeException("Error saving receipt", e);
-        }
+        return receiptRepository.save(receipt);
     }
     public Receipt getReceiptById(int receiptId) {
         return receiptRepository.findById(receiptId)
