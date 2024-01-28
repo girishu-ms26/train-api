@@ -22,7 +22,7 @@ class TrainControllerAdvice {
 
     @ExceptionHandler(SeatNotAvailableException.class)
     public ResponseEntity<?> handleSeatsNotAvailableException(SeatNotAvailableException e) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+        return ResponseEntity.status(HttpStatus.CONFLICT)
                 .body(Collections.singletonMap("response",e.getMessage()));
     }
 
